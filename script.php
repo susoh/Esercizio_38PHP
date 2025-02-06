@@ -12,9 +12,8 @@
 <body>
 <?php
         $id = $_POST["id"];
-        $mod = $_POST["mod"];
         $valore = $_POST["valore"];
-        if ($mod = true) {
+        if(isset($_POST['mod'])) {
             $sql = "UPDATE recensioni SET Voto = $valore WHERE idRecensione = $id;";
         } else {
             $sql = "DELETE FROM recensioni WHERE idRecensione = $id;";
